@@ -6,8 +6,18 @@
     <title>jQuery Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
+<script>
+    //live() runs on 1.7.1v but uppers is deprecated
+    $("#b1").live("click", function(){
+        alert("Hello world");
+    });
+    $('#b2').live("click",function(){
+    $(".topnav").toggleClass('topnav2');
+
+  });
+</script>
 <body>
     <div class="topnav">
         <nav>
@@ -15,6 +25,10 @@
             <a >Exercises</a>
             <a >Home</a>
         </nav>
+    </div>
+    <div>
+        <button id="b1">Hello</button>
+        <button id="b2">Toggle topnav color</button>
     </div>
 </body>
 </html>
